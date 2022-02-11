@@ -5,7 +5,7 @@ This is the github repository of a contest managed by '[Café des Devs](https://
 This contest is a design-implementation contest. You have to make the most optimized and easy-to-read website.
 I personally wanted to push the challenge even further and have a clean development environment with a fully optimized final build.
 
-Technologies used:
+## Technologies used:
 1. [Gulp](https://github.com/gulpjs/gulp)
 2. [Sass](https://github.com/sass/sass/blob/main/js-api-doc/compile.d.ts)
 3. [Postcss](https://github.com/postcss/postcss)
