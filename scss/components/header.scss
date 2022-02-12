@@ -1,9 +1,9 @@
-@forward '../utils/functions.scss';
+@use '../utils' as *;
 
 header {
     height: 10vh;
     @include flex-center;
-    
+
     ul {
 
         li {

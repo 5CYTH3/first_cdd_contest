@@ -1,2 +1,2 @@
-@forward "./utils/colors.scss";@forward "../utils/functions.scss";header{height:10vh}*{margin:0;padding:0}
+header{align-items:center;display:flex;height:10vh;justify-content:center}:root{--primary-color:#000;--primary-color-light:#000;--primary-color-dark:#000;--secondary-color:#000;--secondary-color-light:#000;--secondary-color-dark:#000;--text-color:#000;--text-color-light:#000;--text-color-dark:#000}*{margin:0;padding:0}
 /*# sourceMappingURL=main.css.map */

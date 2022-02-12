@@ -15,6 +15,6 @@
     "gulp-html-minifier": "^0.1.8",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
-    "node-sass": "^7.0.1"
+    "sass": "^1.49.7"
   }
 }

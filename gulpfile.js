@@ -1,7 +1,7 @@
 // I was obliged to use CommonJS syntax instead of ES because gulp doesn't support ES Module syntax
 
 const { src, dest, watch, series } = require('gulp');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-sass')(require('sass'));
 const poscss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const browserSync = require('browser-sync');
