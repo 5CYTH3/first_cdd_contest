@@ -43,7 +43,7 @@ const reloadBrowserSync = (cb) => {
 // Task Watcher
 const watchTask = () => {
     watch('./build/*.html', reloadBrowserSync)
-    watch(['./scss/**/*.scss'], series(scssTask, reloadBrowserSync));
+    watch(['./scss/**/*.scss'], series(scssTask, htmlTask, reloadBrowserSync));
 }
 
 

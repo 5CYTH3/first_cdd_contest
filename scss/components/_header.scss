@@ -1,0 +1,18 @@
+@forward '../utils/functions.scss';
+
+header {
+    height: 10vh;
+    @include flex-center;
+    
+    ul {
+
+        li {
+
+            &:focus {
+                
+            }
+
+        }
+
+    }
+}

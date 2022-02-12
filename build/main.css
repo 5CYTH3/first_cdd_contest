@@ -1,2 +1,2 @@
-*{margin:0;padding:0}
+@forward "./utils/colors.scss";@forward "../utils/functions.scss";header{height:10vh}*{margin:0;padding:0}
 /*# sourceMappingURL=main.css.map */
