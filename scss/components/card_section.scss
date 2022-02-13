@@ -1,7 +1,54 @@
+@use '../utils' as *;
+
 .card__section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 55vh;
+    padding: 2rem;
+
+    @for $i from 1 through 3 {
+        @include card-image($i) {
+            @include image-holder("/res/pic#{$i}.jpg");
+        }
+    }
 
     .card {
+
+        width: 25vw;
+
+        .subtitle__holder {
+            height: 4rem;
+            @include flex-center;
+
+            h5 {
+
+            }
+
+        }
+
+        .img__holder {
+
+            height: 20vh;
         
+        }
+
+        .paragraph__holder {
+
+            p {
+
+            }
+
+        }
+
+        .btn__container {
+
+            img {
+
+            }
+
+        }
+
 
     }
 

@@ -3,3 +3,18 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin card-image($child) {
+    :nth-child(#{$child}) {
+        .img__holder {
+            @content;
+        }
+    }
+}
+
+@mixin image-holder($path) {
+    background-image: url(#{$path});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

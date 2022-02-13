@@ -16,5 +16,8 @@
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
     "sass": "^1.49.7"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^8.0.0"
   }
 }

@@ -6,6 +6,7 @@ const poscss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const browserSync = require('browser-sync');
 const htmlMin = require('gulp-html-minifier')
+const imagemin = require('gulp-imagemin')
 
 const bs = browserSync.create();
 
@@ -22,6 +23,13 @@ const htmlTask = () => {
     return src('./*.html')
         .pipe(htmlMin({ collapseWhitespace: true }))
         .pipe(dest('build'))
+}
+
+// Image minifying task
+const imgTask = () => {
+    return src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
 }
 
 // Serve BrowserSync
@@ -51,6 +59,7 @@ const watchTask = () => {
 exports.default = series(
     scssTask,
     htmlTask,
+    imgTask,
     serveBrowserSync,
     watchTask
 );
