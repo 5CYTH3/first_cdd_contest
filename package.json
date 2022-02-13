@@ -1,6 +1,7 @@
 {
   "name": "cdd_contest",
   "version": "1.0.0",
+  "type": "module",
   "description": "A website made for the 'Café des Devs' contest, of the 12 february 2022",
   "main": "index.js",
   "scripts": {

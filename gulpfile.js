@@ -1,20 +1,22 @@
-// I was obliged to use CommonJS syntax instead of ES because gulp doesn't support ES Module syntax
+import pkg from 'gulp';
+const { src, dest, watch, series } = pkg;
+import gsass from 'gulp-sass';
+import sass from 'sass';
+import postcss from 'gulp-postcss';
+import cssnano from 'cssnano';
+import browserSync from 'browser-sync';
+import htmlMin from 'gulp-html-minifier';
+import imagemin from 'gulp-imagemin';
 
-const { src, dest, watch, series } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const poscss = require('gulp-postcss');
-const cssnano = require('cssnano');
-const browserSync = require('browser-sync');
-const htmlMin = require('gulp-html-minifier')
-const imagemin = require('gulp-imagemin')
+const sassEngine = gsass(sass);
 
 const bs = browserSync.create();
 
 // SASS Task
 const scssTask = () => {
     return src('scss/main.scss', { sourcemaps: true })
-        .pipe(sass())
-        .pipe(poscss([cssnano()]))
+        .pipe(sassEngine())
+        .pipe(postcss([cssnano()]))
         .pipe(dest('build', { sourcemaps: '.' }))
 }
 
@@ -27,9 +29,9 @@ const htmlTask = () => {
 
 // Image minifying task
 const imgTask = () => {
-    return src('src/images/*')
+    return src('res/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
+        .pipe(dest('build/res/', { sourcemaps: '.' }))
 }
 
 // Serve BrowserSync
@@ -56,7 +58,7 @@ const watchTask = () => {
 
 
 // Default gulp task (workflow)
-exports.default = series(
+export default series(
     scssTask,
     htmlTask,
     imgTask,
