@@ -1,0 +1,33 @@
+@use '../utils' as *;
+
+// Section with the banner
+.hero__section {
+    width: 100%;
+    height: auto;
+    
+    .title__side {
+        @include flex-center;
+        height: 25vh;
+        width: 100%;
+
+        h2 {
+            font-size: 5rem;
+            
+            strong {
+                color: var(--text-color-dark)
+            }
+
+        }
+
+    }
+
+    .banner__holder {
+        width: 100%;
+        height: 50vw;
+        max-height: 65vh;
+        background-size: cover;
+        background-image: url('/res/slider1.jpg');
+
+    }
+
+}

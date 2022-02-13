@@ -5,11 +5,20 @@ header {
     @include flex-center;
 
     ul {
-
+        @include flex-center;
+        width: 80vw;
+        height: 100%;
+        flex-direction: row;
+        
         li {
+            @include flex-center;
+            height: 100%;
+            color: var(--text-color);
+            width: 10rem;
 
-            &:focus {
-                
+            &:hover {
+                color: var(--text-color-light);
+                background-color: var(--secondary-color);
             }
 
         }
