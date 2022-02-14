@@ -1,5 +1,6 @@
 @use '../utils' as *;
 
+// Section with all the cards
 .card__section {
     display: flex;
     justify-content: space-around;
@@ -7,6 +8,7 @@
     height: 55vh;
     padding: 2rem;
 
+    // Iterate through 3 ints to instantiate all the cards images
     @for $i from 1 through 3 {
         @include card-image($i) {
             @include image-holder("/res/pic#{$i}.jpg");
@@ -16,13 +18,15 @@
     .card {
 
         width: 25vw;
+        max-width: 20rem;
 
         .subtitle__holder {
             height: 4rem;
             @include flex-center;
+            background-color: var(--secondary-color);
 
             h5 {
-
+                color: var(--text-color-light);
             }
 
         }
@@ -35,16 +39,35 @@
 
         .paragraph__holder {
 
-            p {
+            padding: 1rem;
+            height: auto;
+            background-color: var(--tertiary-color);
 
+            p {
+                color: var(--text-color-light);
+                line-height: 1.5rem;
             }
 
         }
 
         .btn__container {
+            background-color: var(--tertiary-color);
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
 
-            img {
+            i {
+                height: 4rem;
+                width: 4rem;
+                transition:cubic-bezier(0.55, 0.085, 0.68, 0.53);
+                @include image-holder("/res/plus_btn.png");
 
+                &:hover {
+                    transition:cubic-bezier(0.55, 0.085, 0.68, 0.53);
+                    @include image-holder("/res/plus_btn_h.png");
+                }
             }
 
         }

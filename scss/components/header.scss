@@ -1,12 +1,13 @@
 @use '../utils' as *;
 
 header {
+    background-color: var(--primary-color);
     height: 10vh;
     @include flex-center;
 
     ul {
         @include flex-center;
-        width: 80vw;
+        width: 85vw;
         height: 100%;
         flex-direction: row;
         
