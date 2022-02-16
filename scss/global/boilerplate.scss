@@ -29,18 +29,3 @@ main {
         min-width: auto;
     }
 }
-
-@include breakpoint(1000px) {
-    .card__section {
-        height: auto;
-    
-        .card {
-            &:nth-child(3) {
-                display: none;
-            }
-
-            width: 40vw;
-        }
-    
-    }
-}

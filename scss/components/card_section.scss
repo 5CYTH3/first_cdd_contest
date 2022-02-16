@@ -2,12 +2,17 @@
 
 // Section with all the cards
 .card__section {
-    display: flex;
-    justify-content: space-around;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 0.5rem;
+    justify-items: center;
     align-items: center;
-    height: 55vh;
-    padding: 2rem;
-
+    justify-content: center;
+    align-content: center;
+    
     // Iterate through 3 ints to instantiate all the cards images
     @for $i from 1 through 3 {
         @include card-image($i) {
@@ -17,7 +22,7 @@
 
     .card {
 
-        width: 25vw;
+        width: 20rem;
         max-width: 20rem;
 
         .subtitle__holder {
@@ -68,11 +73,25 @@
                     transition:cubic-bezier(0.55, 0.085, 0.68, 0.53);
                     @include image-holder("/res/plus_btn_h.png");
                 }
-         
+        
             }
 
         }
 
     }
 
+}
+
+@include breakpoint(1080px) {
+    .card__section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@include breakpoint(675px) {
+    .card__section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
