@@ -27,19 +27,20 @@
         }
 
         div {
-
-            height: auto;
+            @include flex-center;
 
             div {
-                height: 36px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+
+                img {}
+
             }
     
             p {
 
-                
+
 
             }
 
