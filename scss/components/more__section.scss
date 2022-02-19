@@ -1,0 +1,49 @@
+@use '../utils' as *;
+
+.more__section {
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    .more__card {
+
+        width: 25rem;
+        
+        div {
+            @include flex-center;
+
+            h4 {
+
+            }
+
+        }
+
+        div {
+
+            height: auto;
+
+            div {
+                height: 36px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+    
+            p {
+
+                
+
+            }
+
+        }
+    }
+
+}
