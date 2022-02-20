@@ -2,8 +2,10 @@
 
 This is the github repository of a contest managed by '[Café des Devs](https://discord.com/cafedesdevs)', a french discord server which is a community of developers.
 
-This contest is a design-implementation contest. You have to make the most optimized and easy-to-read website.
+This contest is a design-implementation contest. You have to make the most **optimized** and **easy-to-read** website.
 I personally wanted to push the challenge even further and have a clean development environment with a fully optimized final build.
+
+You can find the design as "maquette_integration_1.jpeg" in the main directory.
 
 ## Technologies used:
 1. [Gulp](https://github.com/gulpjs/gulp)
@@ -23,4 +25,6 @@ cd first_cdd_contest
 npm i
 ```
 
-:warning: Don't run "gulp". It will launch the dev environment but isn't production-ready. Instead, just open the index.html file under the "build/" folder.
+:warning: Don't run "gulp". It will launch the dev environment but **isn't production-ready**. Instead, just open the index.html file under the "build/" folder.
+
+I want to say it again but only the **build folder** is production-ready and is the __most optimized__. If you want to evaluate the size or the loading time of the website, just check this folder **only**.
