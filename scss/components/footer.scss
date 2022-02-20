@@ -1,0 +1,56 @@
+@use '../utils' as *;
+
+footer {
+    border-top: solid 1px var(--tertiary-color);
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: flex-end;
+    height: 10vh;
+
+    .subdiv {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        h5 {
+            margin-left: 1rem;
+            width: auto;
+            margin-bottom: 1rem;
+
+        }
+
+        .icon__container {
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+            @include flex-center;
+
+            i {
+                display: block;
+                background-image: url('/res/reseaux.png');
+                width: 32px;
+                height: 32px;
+                margin: 0 0.25rem 0 0.25rem;
+
+                &:nth-child(1) {
+                    background-position: 0 0;
+                }
+    
+                &:nth-child(2) {
+                    background-position: 64px 0;
+                }
+    
+                &:nth-child(3) {
+                    background-position: 32px 0;
+                }
+
+            }
+        
+        }
+
+
+    }
+
+
+}

@@ -32,3 +32,11 @@
     }
 
 }
+
+@include breakpoint(570px) {
+    .title__side {
+        h2 {
+            // width: clamp(2rem, 70vw, 5rem);
+        }
+    }
+}

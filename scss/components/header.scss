@@ -14,7 +14,7 @@ header {
         li {
             @include flex-center;
             height: 100%;
-            color: var(--text-color);
+            color: rgba(var(--text-color-gray), 0.5);
             width: 10rem;
 
             &:hover {
