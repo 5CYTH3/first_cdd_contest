@@ -26,3 +26,11 @@ header {
 
     }
 }
+
+@include breakpoint(570px) {
+    header {
+        ul {
+            width: 100%;
+        }
+    }
+}
