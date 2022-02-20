@@ -21,6 +21,7 @@
     }
 
     .card {
+        @include basic-hover(10px);
 
         width: 20rem;
         max-width: 20rem;
@@ -66,11 +67,11 @@
             i {
                 height: 4rem;
                 width: 4rem;
-                transition:cubic-bezier(0.55, 0.085, 0.68, 0.53);
+                transition: .2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
                 @include image-holder("/res/plus_btn.png");
 
                 &:hover {
-                    transition:cubic-bezier(0.55, 0.085, 0.68, 0.53);
+                    transition: .2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
                     @include image-holder("/res/plus_btn_h.png");
                 }
         

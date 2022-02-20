@@ -6,45 +6,87 @@
     padding-bottom: 1.5rem;
     width: 100%;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     justify-items: center;
-    align-items: center;
     justify-content: center;
     align-content: center;
 
     .more__card {
-
-        width: 25rem;
+        margin-top: 0.5rem;
+        width: 20rem;
+        height: auto;
         
-        div {
-            @include flex-center;
+        .title__holder {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 4rem;
 
             h4 {
-
+                font-family: $text;
+                color: var(--text-color-gray);
             }
 
         }
 
-        div {
-            @include flex-center;
+        .paragraph__holder {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 6rem;
 
             div {
+                height: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
-
-                img {}
+                margin-right: 0.5rem;
 
             }
     
             p {
-
-
-
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: black;
             }
 
         }
+
+        .subtitle {
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            color: var(--text-color-dark);
+            
+        }
+
+        button {
+            margin-top: 0.75rem;
+            background-color: var(--tertiary-color);
+            width: 7.5rem;
+            height: 3rem;
+            border: none;
+            font-size: large;
+            color: var(--text-color-light);
+            
+            @include basic-hover;
+
+        }
+
     }
 
+}
+
+@include breakpoint(1080px) {
+    .more__section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+}
+
+@include breakpoint(675px) {
+    .more__section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }

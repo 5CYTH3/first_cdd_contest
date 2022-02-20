@@ -18,3 +18,12 @@
     background-size: cover;
     background-position: center;
 }
+
+@mixin basic-hover($y-offset: 7px, $blur-radius: 15px) {
+    transition: .1s cubic-bezier(.2,.81,.93,.77);
+
+    &:hover {
+        transition: .1s cubic-bezier(.2,.81,.93,.77);
+        box-shadow: 0px $y-offset $blur-radius -5px rgba(0,0,0,0.40);
+    }
+}
