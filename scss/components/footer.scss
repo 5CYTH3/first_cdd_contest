@@ -35,14 +35,26 @@ footer {
 
                 &:nth-child(1) {
                     background-position: 0 0;
+
+                    &:hover {
+                        background-position: 0 32px;
+                    }
                 }
     
                 &:nth-child(2) {
                     background-position: 64px 0;
+                    
+                    &:hover {
+                        background-position: 64px 32px;
+                    }
                 }
     
                 &:nth-child(3) {
                     background-position: 32px 0;
+
+                    &:hover {
+                        background-position: 32px 32px;
+                    }
                 }
 
             }

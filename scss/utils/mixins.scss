@@ -1,9 +1,11 @@
+// Basic flexbox mixin to dodge the redundant flexbox centering.
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+// Kind of container of the "image-holder" mixins. Go check the card_section.scss file to understand how it's used.
 @mixin card-image($child) {
     :nth-child(#{$child}) {
         .img__holder {
@@ -12,6 +14,7 @@
     }
 }
 
+// Just a regular mixin to make the image applying dynamic. Go check the card_section.scss file to understand how it's used.
 @mixin image-holder($path) {
     background-image: url(#{$path});
     background-repeat: no-repeat;
@@ -19,6 +22,7 @@
     background-position: center;
 }
 
+// Basic effect of hover with shadow
 @mixin basic-hover($y-offset: 7px, $blur-radius: 15px) {
     transition: .1s cubic-bezier(.2,.81,.93,.77);
 
